@@ -1,0 +1,23 @@
+database:
+escola =>
+tabelas: 
+alunos =>
+cod_aluno (int(ai)), 
+nome (varchar(100)), 
+data_nascimento (datetime),
+cpf (varchar(14)),
+telefone (varchar(14)),
+email (varchar (100)),
+endereco (varchar (100)),
+responsavel (varchar(100))
+
+curso =>
+cod_cursos (int(ai)),
+nome_curso (varchar(100)),
+duracao (int),
+vagas_disponivel (int),
+periodo (varchar(50)),
+modalidade (varchar(50)),
+observacao (varchar(255)),
+valor (money)
+
