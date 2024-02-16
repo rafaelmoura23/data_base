@@ -1,4 +1,4 @@
-pedidos:
+pedido:
 	id_venda (int) primary key;
 	data (datetime);
 	id_colaborador (foreign key);
