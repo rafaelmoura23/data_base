@@ -1,0 +1,43 @@
+pedidos:
+	id_venda (int) primary key;
+	data (datetime);
+	id_colaborador (foreign key);
+	id_cliente (foreign key);
+	id_categoria_cliente (foreign key);
+	id_pagamento (foreign key);
+	ind_transporte (foreign key);
+
+clientes:
+	cpf_cliente (varchar) PK;
+	data_nascimento (date_time);
+	tipo_cliente (varchar) foreign key;
+	endereco (varchar)	
+
+produtos:
+	id_produto (int) PK;
+	nome_produto (varchar);
+	preco (money);
+	categoria_prod (varchar);
+
+meios de pagamento:
+	id_pagamento (int) primary key;
+	tipo_pagamento (varchar);
+
+transporte:
+	id_transporte (int) primary key;
+	meio_transporte (varchar);	
+	compania_entrega (varchar);
+	frete (money);
+	status_entrega (varchar);
+
+colaborador:
+	id_colaborador (int) primary key;
+	nome_colaborador (varchar);
+	data_nascimento (datetime);
+	endereco (varchar);
+	salario (money);	
+
+categoria_cliente:
+	id_categoria (int) PK;
+	tipo_cliente (varchar); 
+	desconto (varchar);
