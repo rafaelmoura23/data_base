@@ -13,53 +13,46 @@
 <body>
     <header>
         <div class="container">
-            <h1>Pizzaria do João</h1>
+            <h1>Pizzaria da Peach's</h1>
             <nav>
                 <ul>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#cardapio">Cardápio</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#pizzas">Pizzas</a></li>
+                    <li><a href="#funcionarios">Funcionários</a></li>
+                    <li><a href="#clientes">Clientes</a></li>
+                    <li><a href="#pedidos">Pedidos</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section id="cardapio" class="section">
-        <div class="container">
-            <h2>Cardápio</h2>
-            <div class="menu-item">
-                <img src="https://via.placeholder.com/150" alt="Pizza de Pepperoni">
-                <div class="info">
-                    <h3>Pizza de Pepperoni</h3>
-                    <p>Deliciosa pizza com pepperoni fatiado.</p>
-                    <p class="price">R$ 25,00</p>
-                </div>
-            </div>
-            <div class="menu-item">
-                <img src="https://via.placeholder.com/150" alt="Pizza Margherita">
-                <div class="info">
-                    <h3>Pizza Margherita</h3>
-                    <p>Clássica pizza italiana com molho de tomate, muçarela e manjericão fresco.</p>
-                    <p class="price">R$ 20,00</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <aside class="cart">
-        <div class="container">
-            <h2>Carrinho</h2>
-            <ul id="cart-items">
-                <!-- Itens do carrinho serão adicionados aqui -->
-            </ul>
-            <p id="total">Total: R$ 0,00</p>
-            <button id="checkout">Finalizar Pedido</button>
-        </div>
-    </aside>
+
+    <div class="pizza-form">
+        <h2>Adicionar Pizza</h2>
+        <form>
+          <div class="form-group">
+            <label for="sabor">Sabor:</label>
+            <input type="text" id="sabor" name="sabor" placeholder="Ex: Calabresa">
+          </div>
+          <div class="form-group">
+            <label for="valor">Valor:</label>
+            <input type="text" id="valor" name="valor" placeholder="Ex: 25.00">
+          </div>
+          <div class="form-group">
+            <label for="tamanho">Tamanho:</label>
+            <select id="tamanho" name="tamanho">
+              <option value="pequeno">Pequeno</option>
+              <option value="médio">Médio</option>
+              <option value="grande">Grande</option>
+            </select>
+          </div>
+          <button type="submit">Adicionar</button>
+        </form>
+      </div>
+    
     <footer>
         <div class="container">
-            <p>&copy; 2024 Pizzaria do João. Todos os direitos reservados.</p>
+            <p>&copy; 2024 Pizzaria da Peache's. Todos os direitos reservados.</p>
         </div>
     </footer>
-    <script src="script.js"></script>
 </body>
 
 </html>
