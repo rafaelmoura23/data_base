@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria do João</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Pizzaria do João</h1>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#cardapio">Cardápio</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="cardapio" class="section">
+        <div class="container">
+            <h2>Cardápio</h2>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/150" alt="Pizza de Pepperoni">
+                <div class="info">
+                    <h3>Pizza de Pepperoni</h3>
+                    <p>Deliciosa pizza com pepperoni fatiado.</p>
+                    <p class="price">R$ 25,00</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/150" alt="Pizza Margherita">
+                <div class="info">
+                    <h3>Pizza Margherita</h3>
+                    <p>Clássica pizza italiana com molho de tomate, muçarela e manjericão fresco.</p>
+                    <p class="price">R$ 20,00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <aside class="cart">
+        <div class="container">
+            <h2>Carrinho</h2>
+            <ul id="cart-items">
+                <!-- Itens do carrinho serão adicionados aqui -->
+            </ul>
+            <p id="total">Total: R$ 0,00</p>
+            <button id="checkout">Finalizar Pedido</button>
+        </div>
+    </aside>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Pizzaria do João. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
