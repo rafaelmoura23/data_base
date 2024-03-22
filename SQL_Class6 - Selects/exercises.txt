@@ -77,4 +77,4 @@ SELECT  * FROM cadfun WHERE filhos < 2 OR filhos > 3;
 SELECT * FROM cadfun WHERE (filhos < 2 OR filhos > 3) AND filhos != 0; 
 
 -- 19.
-SELECT * FROM cadfun WHERE IN filhos BETWEEN 2 AND 4
+SELECT * FROM cadfun WHERE filhos IN (2,3)
