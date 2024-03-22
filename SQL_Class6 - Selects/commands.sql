@@ -1,0 +1,74 @@
+
+-- create
+CREATE TABLE cadfun(
+    CODFUN INT NOT NULL PRIMARY KEY,
+    NOME VARCHAR(40) NOT NULL,
+    DEPTO CHAR(2),
+    FUNCAO CHAR(20),
+    SALARIO NUMERIC(10,2)
+);
+
+-- insert
+INSERT INTO cadfun (CODFUN, NOME, DEPTO, FUNCAO, SALARIO)
+VALUES (12, 'CARLOS ALBERTO', '3', 'VENDEDOR', 1530.00);
+
+INSERT INTO cadfun (CODFUN, NOME, DEPTO, FUNCAO, SALARIO)
+VALUES (15, 'MARCOS HENRIQUE', '2', 'GERENTE', 1985.75);
+
+INSERT INTO cadfun (CODFUN, NOME, DEPTO, FUNCAO, SALARIO)
+VALUES (7, 'APARECIDA SILVA', '3', 'SECRETARIA', 1200.50);
+
+INSERT INTO cadfun (CODFUN, NOME, DEPTO, FUNCAO, SALARIO)
+VALUES (9, 'SOLANGE PACHECO', '5', 'SUPERVISORA', 1599.51);
+
+INSERT INTO cadfun (CODFUN, NOME, DEPTO, FUNCAO, SALARIO)
+VALUES (6, 'MARCELO SOUZA', '3', 'ANALISTA', 2250.11);
+
+INSERT INTO cadfun (CODFUN, NOME, DEPTO, FUNCAO, SALARIO)
+VALUES (1, 'CELIA NASCIMENTO', '2', 'SECRETARIA', 1200.5);
+
+INSERT INTO cadfun VALUES(2, 'WILSON DE MACEDO', '3', 'PROGRAMADOR', 1050.00);
+INSERT INTO cadfun VALUES(5, 'AUGUSTO SOUZA', '3', 'PROGRAMADOR', 1050.00);
+INSERT INTO cadfun VALUES(4, 'CARLOS BASTOS', '5', 'VENDEDOR', 1530.00);
+INSERT INTO cadfun VALUES(25, 'PEDRO SILVA', '3', 'SUPERVISOR', 1599.51);
+INSERT INTO cadfun VALUES(3, 'ANA BASTOS', '5', 'VENDEDORA', 1530.00);
+INSERT INTO cadfun VALUES(10, 'PAULO DA SILVA', '2', 'VENDEDOR', 1530.00);
+
+-- select
+SELECT codfun, nome FROM cadfun;
+SELECT funcao FROM cadfun;
+SELECT DISTINCT funcao FROM cadfun;
+SELECT nome, funcao, depto FROM cadfun;
+
+SELECT nome, salario FROM cadfun WHERE codfun = 1;
+
+SELECT nome, salario, depto FROM cadfun WHERE salario > 1500 AND depto = '3';
+
+SELECT nome, salario FROM cadfun WHERE funcao = 'PROGRAMADOR';
+
+-- distinct
+SELECT salario FROM cadfun;
+SELECT DISTINCT salario from cadfun;
+
+SELECT depto FROM cadfun;
+SELECT DISTINCT depto FROM cadfun;
+
+-- order by
+SELECT nome, salario FROM cadfun ORDER BY nome ASC;
+SELECT nome, salario FROM cadfun ORDER BY nome DESC;
+SELECT nome, salario FROM cadfun ORDER BY SALARIO DESC;
+
+
+SELECT * FROM cadfun ORDER BY nome;
+SELECT nome, funcao, depto FROM cadfun ORDER BY funcao, nome DESC;
+SELECT nome FROM cadfun WHERE codfun = 2 ORDER BY nome;
+
+-- limit
+SELECT nome, salario FROM cadfun ORDER BY nome LIMIT 3;
+SELECT nome, salario FROM cadfun ORDER BY nome LIMIT 3 OFFSET 3; --offset = busca começa a partir do terceiro
+
+
+
+
+
+
