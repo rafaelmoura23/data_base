@@ -1,27 +1,42 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-br">
 
 <head>
-    <meta charset="utf-8">
-    <title>Cadastrar Novo(a) Usuário(a)</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-
-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria</title>
+    <link rel="stylesheet" href="style/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <header>
+        <h1>PitiZzaria</h1>
+        <nav>
+            <ul>
+                <li><a href="#pizzas">Pizzas</a></li>
+                <li><a href="html/consulta-sabores.html">Pesquisar</a></li>
+                <li><a href="#funcionarios">Funcionários</a></li>
+                <li><a href="#clientes">Clientes</a></li>
+                <li><a href="#pedidos">Pedidos</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="container">
-        <h1>Cadastro de Pizzas</h1>
         <form action="cadastro_pizzas.php" method="post">
             <div class="col-4">
                 <label for="sabor">Sabor da Pizza</label>
                 <input type="text" name="sabor_pizza" id="sabor_pizza" class="form-control">
             </div>
             <!-- <div class="col-4">
-                <label for="tamanho">Tamanho da Pizza</label>
-                <input type="text" name="tamanho_pizza" id="tamanho_pizza" class="form-control">
-            </div> -->
+          <label for="tamanho">Tamanho da Pizza</label>
+          <input type="text" name="tamanho_pizza" id="tamanho_pizza" class="form-control">
+      </div> -->
             <br>
             <div class="col-4">
-            <label for="preco">Tamanho da Pizza</label>
+                <label for="preco">Tamanho da Pizza</label>
                 <select name="tamanho_pizza" id="tamanho_pizza" name="tamanho_pizza">
                     <option value="P">P</option>
                     <option value="M">M</option>
@@ -45,6 +60,10 @@
             <a href="index.php" class="btn btn-danger">Cancelar</a>
         </form>
     </div>
+
+        <footer>
+                <p>&copy; 2024 PitiZzaria. Todos os direitos reservados.</p>
+        </footer>
 </body>
 
 </html>
