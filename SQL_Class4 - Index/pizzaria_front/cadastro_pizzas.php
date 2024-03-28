@@ -9,8 +9,8 @@ if (!empty($_POST)) {
     try {
         // Preparar as informações
         // Montar a SQL (pgsql)
-        $sql = "INSERT INTO pizza (sabor_pizza, tamanho_pizza, preco_pizza) 
-        VALUES (:sabor_pizza, :tamanho_pizza, :preco_pizza)";
+        $sql = "INSERT INTO pizza (sabor_pizza, tamanho_pizza, preco_pizza, descricao_pizza) 
+        VALUES (:sabor_pizza, :tamanho_pizza, :preco_pizza, :descricao_pizza)";
 
         // Preparar a SQL (pdo)
         $stmt = $pdo->prepare($sql);
@@ -19,6 +19,7 @@ if (!empty($_POST)) {
             ':sabor_pizza' => $_POST['sabor_pizza'],
             ':tamanho_pizza' => $_POST['tamanho_pizza'],
             ':preco_pizza' => $_POST['preco_pizza'],
+            ':descricao_pizza' => $_POST['descricao_pizza']
         );
         // Tentar Executar a SQL (INSERT)
         // Realizar a inserção das informações no BD (com o PHP)

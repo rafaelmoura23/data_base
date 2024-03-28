@@ -8,10 +8,6 @@ $banco = 'postgres';
 $adm = 'postgres';
 $senha = 'postgres';
 try {
-    // sgbd:host;port;dbname
-    // adm
-    // senha
-    // errmode
     $pdo = new PDO(
         "pgsql:host=$endereco;port=5432;dbname=$banco",
         $adm,
@@ -20,7 +16,7 @@ try {
     );
     echo "Conectado no banco de dados!!!";
     $sql = "CREATE TABLE IF NOT EXISTS pizza 
-    (id_pizza SERIAL, sabor_pizza VARCHAR(255), tamanho_pizza VARCHAR (10), preco_pizza MONEY)";
+    (id_pizza SERIAL, sabor_pizza VARCHAR(255), tamanho_pizza VARCHAR (10), preco_pizza MONEY, descricao_pizza VARCHAR(100))";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
 } catch (PDOException $e) {
