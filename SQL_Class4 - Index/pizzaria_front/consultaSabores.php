@@ -36,12 +36,12 @@ if ($stmt->rowCount() > 0) {
     ?>
     <div class="card">
       <div class="card-header">
-        <h2><?php echo $row['sabor_pizza']; ?></h2>
+        <h2 id="sabor"><?php echo $row['sabor_pizza']; ?></h2>
       </div>
       <div class="card-body">
-        <p>Tamanho: <?php echo $row['tamanho_pizza']; ?></p>
-        <p>Preço: <?php echo $row['preco_pizza']; ?></p>
-        <p>Descrição: <?php echo $row['descricao_pizza']; ?></p>
+        <p id="tamanho">Tamanho: <?php echo $row['tamanho_pizza']; ?></p>
+        <p id="preco">Preço: <?php echo $row['preco_pizza']; ?></p>
+        <p id="descricao">Descrição: <?php echo $row['descricao_pizza']; ?></p>
       </div>
     </div>
     <?php

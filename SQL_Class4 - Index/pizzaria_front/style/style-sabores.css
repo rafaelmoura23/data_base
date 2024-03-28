@@ -1,3 +1,7 @@
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .card {
     margin: 10px;
     padding: 20px;
@@ -26,4 +30,8 @@
   .card-body p {
     margin: 5px 0;
   }
-  
+
+
+#sabor{
+  font-size: 20px;
+}
