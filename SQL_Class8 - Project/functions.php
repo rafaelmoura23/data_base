@@ -34,6 +34,8 @@ echo <<<EOT
     		<h1>Pedidos - Pizzaria Dom Bruno</h1>
             <a href="index.php"><i class="fas fa-home"></i>Inicio</a>
     		<a href="read.php"><i class="fas fa-shopping-basket"></i>Pedidos</a>
+            <a href="create_pizza.php"><i class="fas fa-solid fa-pizza-slice"></i>Pizzas</a>
+            <a href="search.php"><i class="fas fa-solid fa-search"></i>Pesquisar</a>
     	</div>
     </nav>
 EOT;

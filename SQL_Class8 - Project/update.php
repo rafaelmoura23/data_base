@@ -34,7 +34,7 @@ if (isset($_GET['id'])) {
 
 <div class="content update">
 	<h2>Atualizar Contato ---- <?=$contatos['nome']?></h2>
-    <form action="update.php?id_contato=<?=$contatos['id_contato']?>" method="post">
+    <form action="update.php?id=<?=$contatos['id_contato']?>" method="post">
         <label for="id_contato">ID</label>
         <label for="nome">Nome</label>
         <input type="text" name="id" placeholder="" value="<?=$contatos['id_contato']?>" id="id_contato">
