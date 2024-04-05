@@ -10,9 +10,9 @@
 <body>
 <?php include 'html/header.html'; ?>
   <main>
-    <section class="pedido">
-      <h2>Faça seu pedido</h2>
+    <div class="container">
       <form action="confirmar_pedido.php" method="post">
+      <h2>Faça seu pedido</h2>
         <label for="cliente">Cliente:</label>
         <input type="text" id="cliente" name="cliente" placeholder="Nome completo" required>
 
@@ -27,11 +27,9 @@
           <option value="quatro_queijos">Quatro Queijos</option>
           <option value="frango_com_catupiry">Frango com Catupiry</option>
         </select>
-
-
         <button type="submit">Enviar pedido</button>
       </form>
-    </section>
+    </div>
   </main>
   <?php include 'html/footer.html'; ?>
 </body>
