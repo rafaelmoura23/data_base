@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Clientes</title>
     <link rel="stylesheet" href="style/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -34,7 +35,7 @@
             <a href="index.php" class="btn btn-danger">Cancelar</a>
         </form>
     </div>
-
+    <?php include 'html/footer.html'; ?>
 </body>
 
 </html>

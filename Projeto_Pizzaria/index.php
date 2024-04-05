@@ -19,10 +19,6 @@
                 <label for="sabor">Sabor da Pizza</label>
                 <input type="text" name="sabor_pizza" id="sabor_pizza" class="form-control">
             </div>
-            <!-- <div class="col-4">
-          <label for="tamanho">Tamanho da Pizza</label>
-          <input type="text" name="tamanho_pizza" id="tamanho_pizza" class="form-control">
-      </div> -->
             <div class="col-4">
                 <label for="preco">Tamanho da Pizza</label>
                 <select name="tamanho_pizza" id="tamanho_pizza" name="tamanho_pizza">
@@ -44,10 +40,7 @@
             <a href="index.php" class="btn btn-danger">Cancelar</a>
         </form>
     </div>
-
-        <footer>
-                <p>&copy; 2024 PitiZzaria. Todos os direitos reservados.</p>
-        </footer>
+    <?php include 'html/footer.html'; ?>
 </body>
 
 </html>

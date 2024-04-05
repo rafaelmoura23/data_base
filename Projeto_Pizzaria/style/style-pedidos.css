@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+  }
+  
+  section.pedido {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 500px;
+  }
+  
+  section.pedido h2 {
+    margin-top: 0;
+  }
+  
+  section.pedido form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  section.pedido label {
+    margin-bottom: 5px;
+  }
+  
+  section.pedido input,
+  section.pedido select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  section.pedido button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
