@@ -25,7 +25,16 @@ ON cliente.CODCLI = venda.CODCLI
 GROUP BY cliente.NOME
 
 -- 5)
-SELECT cliente.NOME, COUNT(*), SUM(venda.valor) AS QTDE
-FROM cliente INNER JOIN venda
-ON cliente.CODCLI = venda.CODCLI
-GROUP BY cliente.NOME
+SELECT cli.NOME, COUNT(*), SUM(ven.valor) AS QTDE
+FROM cliente cli INNER JOIN venda ven
+ON cli.CODCLI = ven.CODCLI
+GROUP BY cli.NOME
+
+-- 6)
+SELECT CLI.NOME, COUNT(*) AS VENCIDOS
+FROM cliente cli INNER JOIN venda ven
+ON cli.CODCLI = ven.CODCLI
+WHERE vencto < '2003-12-31'
+GROUP BY cli.NOME
+
+-- 7)
