@@ -1,6 +1,7 @@
 -- CREATE DATABASE
 CREATE DATABASE AV1;
 
+-- CREATE TABLES
 -- Tabela clientes
 CREATE TABLE clientes (
     id SERIAL PRIMARY KEY,
