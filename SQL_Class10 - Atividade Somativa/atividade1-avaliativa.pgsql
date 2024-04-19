@@ -207,7 +207,7 @@ SELECT
     entregas.cep, entregas.cidade, entregas.endereco
 FROM
     pedidos
-LEFT JOIN
+JOIN
     entregas ON pedidos.id = entregas.pedido_id
 
 -- 8
@@ -236,3 +236,76 @@ FROM
     pizzas
 JOIN
     promocoes ON pizzas.id = promocoes.pizza_id;
+
+
+-- EXERCÍCIOS (2ª PARTE)
+-- 1
+SELECT * FROM clientes;
+
+-- 2
+SELECT * FROM 
+    pedidos
+WHERE 
+    data BETWEEN '2024-04-20' AND '2024-04-23';
+
+-- 3
+SELECT 
+    pedido_id, pizza_id, tamanho, quantidade
+FROM 
+    itens_pedido
+WHERE
+    pedido_id = 1;
+
+-- 4
+SELECT 
+    SUM(total) AS total_gasto
+FROM 
+    pedidos
+WHERE 
+    cliente_id = 1;
+
+-- 5
+SELECT
+    pizzas.nome, COUNT(*)
+FROM
+    itens_pedido
+JOIN
+    pizzas ON itens_pedido.pizza_id = pizzas.id
+GROUP BY
+    pizzas.nome
+ORDER BY
+    COUNT(*) DESC;
+
+
+-- 6
+SELECT
+    id, nome
+FROM
+    pizzas
+WHERE
+    nome = 'Pizza de Calabresa';
+
+-- 7
+SELECT * FROM funcionarios;
+
+-- 8
+SELECT
+    dia, hora_abertura, hora_fechamento
+FROM
+    horario_funcionamento;
+
+
+-- 9
+SELECT
+    id, data, total, status
+FROM
+    pedidos
+WHERE
+    status = 'Em andamento';
+
+
+-- 10
+SELECT 
+    AVG(data_entrega_prevista - data) AS tempo_medio_espera
+FROM                                                                                                                                                                                                                                                            
+    pedidos;
