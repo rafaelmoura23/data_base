@@ -193,7 +193,7 @@ SELECT
     pedidos.id, pedidos.data, pedidos.total, pedidos.status
 FROM
     clientes
-JOIN
+RIGHT JOIN
     pedidos ON clientes.id = pedidos.cliente_id;
 
 -- 6
@@ -201,5 +201,38 @@ SELECT
     pizzas.nome, pizzas.ingredientes
 FROM pizzas
 
--- 7
+-- 7 
+SELECT
+    pedidos.id, pedidos.status, pedidos.total,
+    entregas.cep, entregas.cidade, entregas.endereco
+FROM
+    pedidos
+LEFT JOIN
+    entregas ON pedidos.id = entregas.pedido_id
 
+-- 8
+SELECT
+    funcionarios.nome, funcionarios.cargo, funcionarios.supervisor_id
+    supervisores.nome, supervisores.cargo, supervisores.supervisor_id
+FROM 
+    funcionarios
+INNER JOIN
+    supervisores ON funcionarios.supervisor_id = supervisores.id;
+
+-- 9
+SELECT
+    itens_pedido.id, itens_pedido.tamanho,
+    pizzas.nome
+FROM 
+    itens_pedido
+JOIN 
+    pizzas ON itens_pedido.pizza_id = pizzas.id;
+
+-- 10 *
+SELECT
+    pizzas.id, pizzas.nome,
+    promocoes.nome, promocoes.descricao
+FROM
+    pizzas
+JOIN
+    promocoes ON pizzas.id = promocoes.pizza_id;
