@@ -38,3 +38,8 @@ WHERE vencto < '2003-12-31'
 GROUP BY cli.NOME
 
 -- 7)
+SELECT CLI.NOME, COUNT(*) AS VENCIDOS
+FROM cliente cli INNER JOIN venda ven
+ON cli.CODCLI = ven.CODCLI
+WHERE 
+GROUP BY cli.NOME
