@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Sabores de Pizza</title>
+    <link rel="stylesheet" href="../style/style-consulta-sabores.css">
+</head>
+<body>
+    <header>
+        <h1>PitiZzaria</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.php">Pizzas</a></li>
+                <li><a href="consulta-sabores.html">Pesquisar</a></li>
+                <li><a href="#funcionarios">Funcionários</a></li>
+                <li><a href="../cadastrar_cliente.php">Clientes</a></li>
+                <li><a href="../gerar_pedidos.php">Pedidos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Consultar Sabores de Pizza</h1>
+    <form action="../consultaSabores.php" method="post">
+        <label for="sabor">Digite o sabor da pizza:</label>
+        <input type="text" id="sabor" name="sabor" placeholder="Ex: Calabreza">
+        <button type="submit">Consultar</button>
+    </form>
+</body>
+</html>

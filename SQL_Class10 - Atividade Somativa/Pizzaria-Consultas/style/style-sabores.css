@@ -1,0 +1,37 @@
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+  
+  .card-header {
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .card-header h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .card-body {
+    padding: 10px;
+  }
+  
+  .card-body p {
+    margin: 5px 0;
+  }
+
+
+#sabor{
+  font-size: 20px;
+}
