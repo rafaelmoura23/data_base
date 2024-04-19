@@ -23,13 +23,11 @@ require_once 'conectaBD.php';
 // Obter o tamanho selecionado
 $tamanho = filter_input(INPUT_POST, 'tamanho');
 
-// Montar a SQL
+// QUERY SQL PARA CONSULTA NO BANCO DE DADOS
 $sql = "SELECT * FROM pizza WHERE tamanho_pizza = :tamanho";
 
-// Preparar a SQL
 $stmt = $pdo->prepare($sql);
 
-// Definir/organizar os dados p/ SQL
 $dados = array(
     ':tamanho' => $tamanho,
 );
