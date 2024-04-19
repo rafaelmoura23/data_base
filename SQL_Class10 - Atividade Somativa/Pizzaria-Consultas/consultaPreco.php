@@ -3,30 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lista de Pizzas</title>
+  <title>Consulta Fixa por Preço</title>
   <link rel="stylesheet" href="style/style-sabores.css">
 </head>
 <body>
   <form method="post" action="">
-    <input type="submit" value="Mostrar todas as pizzas">
+    <input type="hidden" name="preco_min" value="30">
+    <input type="hidden" name="preco_max" value="60">
+    <input type="submit" value="Mostrar pizzas entre R$ 30,00 e R$ 60,00">
   </form>
 
 <?php
 require_once 'conectaBD.php';
 
-// Verificar se o formulário foi submetido
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    // Montar a SQL
-    $sql = "SELECT * FROM pizza";
+    // Obter os valores mínimo e máximo de preço
+    $preco_min = filter_input(INPUT_POST, 'preco_min', FILTER_VALIDATE_FLOAT);
+    $preco_max = filter_input(INPUT_POST, 'preco_max', FILTER_VALIDATE_FLOAT);
 
-    // Preparar a SQL
+
+    // QUERY SQL QUE EXECUTA A CONSULTA NO BANCO DE DADOS
+    $sql = "SELECT * FROM pizza WHERE preco_pizza >= :preco_min AND preco_pizza <= :preco_max";
+
     $stmt = $pdo->prepare($sql);
 
-    // Executar a consulta
-    $stmt->execute();
+    $dados = array(
+        ':preco_min' => $preco_min,
+        ':preco_max' => $preco_max,
+    );
 
-    // Verificar se encontrou resultados
+    $stmt->execute($dados);
+
     if ($stmt->rowCount() > 0) {
 
         // Exibir os resultados em uma tabela
@@ -46,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
     } else {
-        echo "<h1>Nenhuma pizza cadastrada!</h1>";
+        echo "<h1>Nenhuma pizza encontrada entre R$ $preco_min e R$ $preco_max!</h1>";
     }
 }
 

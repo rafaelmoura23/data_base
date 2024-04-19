@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exemplo</title>
+  <title>Consulta por Tamanho</title>
   <link rel="stylesheet" href="style/style-sabores.css">
 </head>
 <body>
