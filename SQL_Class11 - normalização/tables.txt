@@ -1,0 +1,43 @@
+FORMULÁRIO DE PEDIDOS
+
+Número do Pedido
+Prazo de Entrega
+Data do Pedido
+
+Nome do Cliente
+CGC
+Inscrição Estadual
+Código do Produto(*)
+Unidade(*)
+
+Quantidade do Produto(*)
+Descrição do Produto(*)
+Valor unitário do produto(*)
+Valor total(*)
+
+Código do Vendedor
+Nome do Vendedor
+
+(*) Atributos que se repetem no documento 
+
+
+PEDIDO(
+	NumerodoPedido (pk)
+	PrazoDaEntrega
+	DataDoPedido
+	Cliente
+	CGC
+	IE
+	CodigoVendedor
+	NomeDoVendedor
+)
+
+ITEM PEDIDO(
+	NumeroDoPedido (sk) (pk)
+	CodigoDoProduto (pk)
+	Unidade
+	QuantidadeDeProduto
+	DescricaoDoProduto
+	Voluntario
+	ValorTotal
+)
