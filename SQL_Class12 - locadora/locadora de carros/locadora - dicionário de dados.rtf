@@ -1,0 +1,196 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil MS Sans Serif;}{\f1\fnil\fcharset0 MS Sans Serif;}}
+{\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\b\f0\fs16 001 - Entidade: \cf2\b0 Ag\f1\'eancia\cf1\b 
+\par \cf0\b0\f0 endereco: Endere\f1\'e7o da ag\'eancia. Tipo: varchar(255).
+\par contato: Informa\'e7\'e3o de contato da ag\'eancia. Tipo: varchar(12).
+\par numero_agencia: N\'famero da ag\'eancia. Tipo: int.
+\par estado: Estado onde a ag\'eancia est\'e1 localizada. Tipo: varchar(255).
+\par cidade: Cidade onde a ag\'eancia est\'e1 localizada. Tipo: varchar(255).
+\par \f0 
+\par \cf1\b 002 - Entidade: \cf2\b0 Cargo\cf1\b 
+\par \cf0\b0 nome_cargo: Nome do cargo. Tipo: varchar(255).
+\par cod_cargo: C\f1\'f3digo do cargo. Tipo: serial.
+\par turno: Turno do funcion\'e1rio associado ao cargo. Tipo: char(1).
+\par id_funcionario: Identificador \'fanico do funcion\'e1rio associado. Tipo: int.
+\par \f0 
+\par \cf1\b 003 - Entidade: \cf2\b0 Carro\cf1\b 
+\par \cf0\b0 ano: Ano de fabrica\f1\'e7\'e3o do carro. Tipo: int.
+\par modelo: Modelo do carro. Tipo: varchar(25).
+\par id_carro: Identificador \'fanico do carro. Tipo: int.
+\par placa: Placa do carro. Tipo: varchar(7).
+\par tipo: Tipo do carro. Tipo: varchar(255).
+\par disponibilidade: Disponibilidade do carro. Tipo: varchar(255).
+\par \f0 
+\par \cf1\b 004 - Entidade: \cf2\b0 Clientes\cf1\b 
+\par \cf0\b0 nome: Nome do cliente. Tipo: varchar(255).
+\par sobrenome: Sobrenome do cliente. Tipo: varchar(255).
+\par endereco: Endere\f1\'e7o do cliente. Tipo: varchar(255).
+\par id_cliente: Identificador \'fanico do cliente. Tipo: int.
+\par cidade: Cidade do cliente. Tipo: varchar(255).
+\par celular: N\'famero de celular do cliente. Tipo: varchar(17).
+\par estado: Estado do cliente. Tipo: varchar(255).
+\par email: Endere\'e7o de e-mail do cliente. Tipo: varchar(255).
+\par id_pagamento: Identificador do pagamento. Tipo: serial.
+\par \f0 
+\par \cf1\b 005 - Rela\f1\'e7\'e3o: \cf2\b0 Envia\cf1\b 
+\par \cf0\b0\f0 id_envia: Identificador \f1\'fanico do envio. Tipo: int.
+\par observacao: Observa\'e7\'e3o do envio. Tipo: varchar(255).
+\par id_feedback: Identificador \'fanico do feedback. Tipo: int.
+\par id_cliente: Identificador \'fanico do cliente. Tipo: int.
+\par \f0 
+\par \cf1\b 006 - Entidade: \cf2\b0 Feedback\cf1\b 
+\par \cf0\b0 id_feedback: Identificador \f1\'fanico do feedback. Tipo: int.
+\par data_feedback: Data do feedback. Tipo: date.
+\par comentario: Coment\'e1rio do feedback. Tipo: varchar(255).
+\par avaliacao: Avalia\'e7\'e3o do feedback. Tipo: decimal(5,2).
+\par \f0 
+\par \cf1\b 007 - Entidade: \cf2\b0 Funcionario\cf1\b 
+\par \cf0\b0 contato: Informa\f1\'e7\'e3o de contato do funcion\'e1rio. Tipo: varchar(30).
+\par data_contratacao: Data de contrata\'e7\'e3o do funcion\'e1rio. Tipo: date.
+\par id_funcionario: Identificador \'fanico do funcion\'e1rio. Tipo: int.
+\par nome: Nome do funcion\'e1rio. Tipo: varchar(255).
+\par sobrenome: Sobrenome do funcion\'e1rio. Tipo: varchar(255).
+\par cargo: Cargo do funcion\'e1rio. Tipo: varchar(255).
+\par \f0 
+\par \cf1\b 008 - Rela\f1\'e7\'e3o: \cf2\b0 Locacao\cf1\b 
+\par \cf0\b0\f0 data_locacao: Data de loca\f1\'e7\'e3o do carro. Tipo: date.
+\par data_devolucao: Data de devolu\'e7\'e3o do carro. Tipo: date.
+\par id_locacao: Identificador \'fanico da loca\'e7\'e3o. Tipo: int.
+\par valor_total: Valor total da loca\'e7\'e3o. Tipo: money.
+\par id_carro: Identificador \'fanico do carro locado. Tipo: int.
+\par id_cliente: Identificador \'fanico do cliente que alugou o carro. Tipo: int.
+\par \f0 
+\par \cf1\b 009 - Entidade: \cf2\b0 Manutencao\cf1\b 
+\par \cf0\b0 id_manutencao: Identificador \f1\'fanico da manuten\'e7\'e3o. Tipo: serial.
+\par custo: Custo da manuten\'e7\'e3o. Tipo: money.
+\par km: Quilometragem da manuten\'e7\'e3o. Tipo: varchar(10).
+\par data_manutencao: Data da manuten\'e7\'e3o. Tipo: date.
+\par tipo_manutencao: Tipo de manuten\'e7\'e3o. Tipo: varchar(255).
+\par descricao: Descri\'e7\'e3o da manuten\'e7\'e3o. Tipo: varchar(255).
+\par \f0 
+\par \cf1\b 010 - Rela\f1\'e7\'e3o: \cf2\b0 POSSUI\cf1\b 
+\par \cf0\b0\f0 
+\par \cf1\b 011 - Entidade: \cf2\b0 Pagamento\cf1\b 
+\par \cf0\b0 id_pagamento: Identificador \f1\'fanico do pagamento. Tipo: serial.
+\par status_pagamento: Status do pagamento. Tipo: varchar(20).
+\par forma_pagamento: Forma de pagamento. Tipo: varchar(40).
+\par valor: Valor do pagamento. Tipo: money.
+\par data_pagamento: Data do pagamento. Tipo: date.
+\par id_comprovante: Identificador do comprovante de pagamento. Tipo: int.
+\par comprovante: Tipo de comprovante. Tipo: varchar(20).
+\par \f0 
+\par \cf1\b 012 - Rela\f1\'e7\'e3o: \cf2\b0 Realiza\cf1\b 
+\par \cf0\b0\f0 
+\par \cf1\b 013 - Rela\f1\'e7\'e3o: \cf2\b0 Recebe\cf1\b 
+\par \cf0\b0\f0 id_manutencao: Identificador \f1\'fanico da manuten\'e7\'e3o. Tipo: serial.
+\par id_carro: Identificador \'fanico do carro. Tipo: int.
+\par \f0 
+\par \cf1\b 014 - Rela\f1\'e7\'e3o: \cf2\b0 Verifica\cf1\b 
+\par \cf0\b0\f0 id_funcionario: Identificador \f1\'fanico do funcion\'e1rio. Tipo: int.
+\par numero_agencia: N\'famero da ag\'eancia. Tipo: int.
+\par \f0 
+\par \cf1\b 015 - Atributo: \cf2\b0 ano\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 016 - Atributo: \cf2\b0 avaliacao\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 017 - Atributo: \cf2\b0 cargo\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 018 - Atributo: \cf2\b0 celular\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 019 - Atributo: \cf2\b0 cidade\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 020 - Atributo: \cf2\b0 cidade\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 021 - Atributo: \cf2\b0 cod_cargo\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 022 - Atributo: \cf2\b0 comentario\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 023 - Atributo: \cf2\b0 comprovante\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 024 - Atributo: \cf2\b0 contato\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 025 - Atributo: \cf2\b0 contato\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 026 - Atributo: \cf2\b0 custo\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 027 - Atributo: \cf2\b0 data_contratacao\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 028 - Atributo: \cf2\b0 data_devolucao\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 029 - Atributo: \cf2\b0 data_feedback\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 030 - Atributo: \cf2\b0 data_locacao\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 031 - Atributo: \cf2\b0 data_manutencao\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 032 - Atributo: \cf2\b0 data_pagamento\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 033 - Atributo: \cf2\b0 descricao\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 034 - Atributo: \cf2\b0 disponibilidade\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 035 - Atributo: \cf2\b0 email\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 036 - Atributo: \cf2\b0 endereco\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 037 - Atributo: \cf2\b0 endereco\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 038 - Atributo: \cf2\b0 estado\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 039 - Atributo: \cf2\b0 estado\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 040 - Atributo: \cf2\b0 forma_pagamento\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 041 - Atributo: \cf2\b0 id_carro\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 042 - Atributo: \cf2\b0 id_cliente\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 043 - Atributo: \cf2\b0 id_comprovante\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 044 - Atributo: \cf2\b0 id_envia\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 045 - Atributo: \cf2\b0 id_feedback\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 046 - Atributo: \cf2\b0 id_funcionario\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 047 - Atributo: \cf2\b0 id_locacao\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 048 - Atributo: \cf2\b0 id_manutencao\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 049 - Atributo: \cf2\b0 id_pagamento\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 050 - Atributo: \cf2\b0 km\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 051 - Atributo: \cf2\b0 modelo\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 052 - Atributo: \cf2\b0 nome\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 053 - Atributo: \cf2\b0 nome\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 054 - Atributo: \cf2\b0 nome_cargo\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 055 - Atributo: \cf2\b0 numero_agencia\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 056 - Atributo: \cf2\b0 observacao\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 057 - Atributo: \cf2\b0 placa\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 058 - Atributo: \cf2\b0 sobrenome\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 059 - Atributo: \cf2\b0 sobrenome\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 060 - Atributo: \cf2\b0 status_pagamento\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 061 - Atributo: \cf2\b0 tipo\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 062 - Atributo: \cf2\b0 tipo_manutencao\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 063 - Atributo: \cf2\b0 turno\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 064 - Atributo: \cf2\b0 valor\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 065 - Atributo: \cf2\b0 valor_total\cf1\b 
+\par \cf0\b0 
+\par 
+\par }
+ 
