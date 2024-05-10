@@ -248,18 +248,3 @@ SELECT * FROM clientes;
 SELECT * FROM verifica;
 SELECT * FROM envia;
 
-
-
--- 7.**RIGHT JOIN**
--- 7.1
-
-
--- 7.2
-
-
-
---7.3
-
-
-
--- SELECTS
