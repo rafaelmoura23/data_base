@@ -1,2 +1,3 @@
 SQLSTATE[23505]: Unique violation: 7 ERRO:  duplicar valor da chave viola a restrição de unicidade "login_pkey"
-DETAIL:  Chave (cpf)=(123456) já existe.
+DETAIL:  Chave (cpf)=(123456) já existe.SQLSTATE[23505]: Unique violation: 7 ERRO:  duplicar valor da chave viola a restrição de unicidade "login_pkey"
+DETAIL:  Chave (cpf)=(123) já existe.

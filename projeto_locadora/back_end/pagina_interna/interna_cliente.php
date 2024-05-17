@@ -20,9 +20,14 @@ $cliente = $_SESSION["cliente"];
     <title>Página Interna</title>
 </head>
 
+<?php include '../../html/header.html'; ?>
+
 <body>
-    <h1>Bem-vindo, <?php echo $cliente['cpf']; ?>!</h1>
+    <h1>Bem-vindo, <?php echo $cliente['nome']; ?>!</h1>
     <p>Esta é a página interna apenas para clientes logados.</p>
+    <a href="../locacoes/locacao_forms.php">Locação</a>
+
+
     <a href="./logout.php">Sair</a>
 </body>
 

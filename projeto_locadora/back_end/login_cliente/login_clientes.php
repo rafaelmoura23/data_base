@@ -34,6 +34,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Login</title>
 </head>
 
+<?php include '../../html/header.html'; ?>
+
 <body>
 
 <div class="container_login">

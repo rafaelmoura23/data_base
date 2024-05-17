@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
+<?php include '../../html/header.html'; ?>
+
 <body>
     <div class="container">
         <form action="insert_banco_login.php" method="post">
@@ -16,6 +18,14 @@
                 <h2>Cadastro de Clientes</h2>
                 <label for="cpf">CPF</label>
                 <input type="text" name="cpf" id="cpf" class="form-control">
+            </div>
+            <div class="col-4">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" class="form-control">
+            </div>
+            <div class="col-4">
+                <label for="email">email</label>
+                <input type="email" name="email" id="email" class="form-control">
             </div>
             <div class="col-4">
                 <label for="senha">Senha</label>

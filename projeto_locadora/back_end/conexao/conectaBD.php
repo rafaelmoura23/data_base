@@ -14,7 +14,6 @@ try {
         $senha,
         [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
     );
-    echo "Conectado ao banco de dados!!! <br/>";
 } catch (PDOException $e) {
     echo "Falha ao conectar ao banco de dados. <br/>";
     die($e->getMessage());
