@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Clientes</title>
-    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="../../css/style-cadastro_clientes.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
@@ -19,11 +19,11 @@
                 <input type="text" name="nome" id="nome" class="form-control">
             </div>
             <div class="col-4">
-                <label for="sobrenome">sobrenome</label>
+                <label for="sobrenome">Sobrenome</label>
                 <input type="text" name="sobrenome" id="sobrenome" class="form-control">
             </div>
             <div class="col-4">
-                <label for="endereco">endereco</label>
+                <label for="endereco">Endereco</label>
                 <input type="text" name="endereco" id="endereco" class="form-control">
             </div>
             <div class="col-4">

@@ -10,4 +10,5 @@ LINE 1: ...me, endereco, id_cliente, cidade, celular, email, id_pagamen...
                                                              ^SQLSTATE[23505]: Unique violation: 7 ERRO:  duplicar valor da chave viola a restrição de unicidade "clientes_pkey"
 DETAIL:  Chave (id_cliente)=(10) já existe.SQLSTATE[23503]: Foreign key violation: 7 ERRO:  inserção ou atualização em tabela "clientes" viola restrição de chave estrangeira "clientes_id_pagamento_fkey"
 DETAIL:  Chave (id_pagamento)=(23) não está presente na tabela "pagamento".SQLSTATE[22P02]: Invalid text representation: 7 ERRO:  sintaxe de entrada é inválida para tipo integer: ""
+CONTEXT:  parâmetro de portal sem nome $4 = ''SQLSTATE[22P02]: Invalid text representation: 7 ERRO:  sintaxe de entrada é inválida para tipo integer: ""
 CONTEXT:  parâmetro de portal sem nome $4 = ''
