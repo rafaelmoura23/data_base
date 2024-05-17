@@ -2,6 +2,7 @@
 session_start();
 require_once '../conexao/conectaBD.php';
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cpf = $_POST["cpf"];
     $senha = $_POST["senha"];
