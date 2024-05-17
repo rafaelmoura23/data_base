@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(11, 30, 60);
+    background: linear-gradient(90deg, rgba(11, 30, 60, 1) 4%, rgba(5, 87, 125, 1) 100%);
+    font-family: "Poppins", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.card {
+    width: 23%;
+    margin: 1%;
+    float: left;
+    background-color: #f1f1f1;
+    color:#05577D;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px 8px 0 0;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+#numero_agencia {
+    margin: 0;
+}
+
+#cidade,
+#endereco,
+#contato {
+    margin: 5px 0;
+}

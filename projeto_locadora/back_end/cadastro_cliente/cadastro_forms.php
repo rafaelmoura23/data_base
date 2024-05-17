@@ -47,10 +47,11 @@
                 <input type="text" name="id_pagamento" id="id_pagamento" class="form-control">
             </div>
 
-
             <button type="submit" name="enviarDados" class="btn btn-primary">Cadastrar Cliente</button>
-
             <a href="../../index.php" class="btn btn-danger">Cancelar</a>
+
+            <a href="../login_cliente/login_clientes.php">Já tem uma Conta?Faça Login!</a>
+
         </form>
     </div>
 </body>

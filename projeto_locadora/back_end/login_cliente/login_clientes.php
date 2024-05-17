@@ -1,0 +1,1 @@
+<a href="../cadastro_cliente/cadastro_forms.php">Não tem uma Conta?Cadastre-se já!</a>
