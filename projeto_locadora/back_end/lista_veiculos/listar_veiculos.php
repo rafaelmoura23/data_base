@@ -21,7 +21,14 @@ $stmt->execute();
 </head>
 
 <body>
-<?php include '../../html/header_deslogado.php'; ?>
+    <?php include '../../html/header_deslogado.php'; ?>
+
+    <div class="fitros">
+        <a href="http://">Modelo</a>
+        <a href="http://">Agência</a>
+        <a href="http://">Ano</a>
+        <a href="http://">Preço</a>
+    </div>
 
     <?php
     if ($stmt->rowCount() > 0) {
@@ -38,14 +45,14 @@ $stmt->execute();
                     <p id="preco_aluguel">Preço: <?php echo $row['preco_aluguel']; ?></p>
                     <p id="id_agencia">Agências: <?php echo $row['nome_agencia']; ?></p>
 
-                    
+
                     <a href="../login_cliente/login_clientes.php" id="btnAlugar">Alugar</a>
                 </div>
             </div>
     <?php
         }
     } else {
-        echo "<h1>Nenhum veículo encontrada!</h1>";
+        echo "<h1>Nenhum veículo encontrado!</h1>";
     }
 
     ?>

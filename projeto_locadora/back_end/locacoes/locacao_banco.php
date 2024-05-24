@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if ($stmt->rowCount() > 0) {
-        header("Location: confirmacao_.php");
+        header("Location: confirmacao.php?" . http_build_query($_POST));
         exit();
     } else {
         echo "Erro ao realizar locação.";
