@@ -23,11 +23,20 @@ $stmt->execute();
 <body>
     <?php include '../../html/header_deslogado.php'; ?>
 
-    <div class="fitros">
+
+    <div class="filtros">
+        <h3>Filtros  <i class="fas fa-solid fa-filter"></i></h3>
+        
         <a href="http://">Modelo</a>
+        <input type="Pesquisar" id="modelo">
         <a href="http://">Agência</a>
+        <input type="Pesquisar" id="agencia">
         <a href="http://">Ano</a>
+        <input type="Pesquisar" id="ano">
         <a href="http://">Preço</a>
+        <input type="Pesquisar" id="preco">
+
+        
     </div>
 
     <?php
