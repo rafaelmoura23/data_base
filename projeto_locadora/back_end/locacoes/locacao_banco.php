@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id_carro = $_POST["id_carro"];
     $valor_total = $_POST["valor_total"];
     $id_cliente = $_POST["id_cliente"];
-    // $id_cliente = $_SESSION["cliente"]["id_cliente"];
+    $_SESSION["cliente"];
 
 
     $sql = "INSERT INTO locacao (data_locacao, data_devolucao, id_locacao, valor_total, id_carro, id_cliente) 
