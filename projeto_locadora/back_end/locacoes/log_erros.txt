@@ -1,0 +1,4 @@
+SQLSTATE[23502]: Not null violation: 7 ERRO:  o valor nulo na coluna "id_cliente" da relação "locacao" viola a restrição de não-nulo
+DETAIL:  Registro que falhou contém (2024-05-17, 2024-05-18, 21, R$ 500,00, 5, null).SQLSTATE[23502]: Not null violation: 7 ERRO:  o valor nulo na coluna "id_cliente" da relação "locacao" viola a restrição de não-nulo
+DETAIL:  Registro que falhou contém (2024-05-17, 2024-05-18, 21, R$ 500,00, 5, null).SQLSTATE[23502]: Not null violation: 7 ERRO:  o valor nulo na coluna "id_cliente" da relação "locacao" viola a restrição de não-nulo
+DETAIL:  Registro que falhou contém (2024-05-17, 2024-05-18, 21, R$ 500,00, 5, null).
