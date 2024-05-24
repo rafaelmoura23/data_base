@@ -10,7 +10,7 @@ $localhost_port = $_SERVER['SERVER_PORT'];
 <nav class="navBar">
     <img src="../../img/logo2-removebg-preview.png" alt="logo" class="logo">
     <div class="lis">
-        <li><a href="http://localhost:<?php echo $localhost_port; ?>"><i class="fas fa-solid fa-home" style="color: #ffffff;"></i> Home</a></li>
+        <li><a href="/home"><i class="fas fa-solid fa-home" style="color: #ffffff;"></i> Home</a></li>
         <li><a href="http://localhost:<?php echo $localhost_port; ?>/back_end/lista_veiculos/listar_veiculos.php"><i class="fas fa-solid fa-car" style="color: #ffffff;"></i> Veículos</a></li>
         <li><a href="http://localhost:<?php echo $localhost_port; ?>/back_end/lista_agencias/listar_agencias.php"><i class="fas fa-solid fa-map"></i> Agências</a></li>
         <li><a href="http://"><i class="fas fa-solid fa-info"></i> Sobre Nós</a></li>

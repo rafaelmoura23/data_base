@@ -21,7 +21,7 @@ $stmt->execute();
 </head>
 
 <body>
-    <?php include '../../html/header.html'; ?>
+<?php include '../../html/header_clientes.php'; ?>
 
     <?php
     if ($stmt->rowCount() > 0) {

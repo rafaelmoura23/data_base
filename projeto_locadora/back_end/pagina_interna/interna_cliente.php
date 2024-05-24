@@ -20,7 +20,7 @@ $cliente = $_SESSION["cliente"];
     <title>Página Interna</title>
 </head>
 
-<?php include '../../html/header.html'; ?>
+<?php include '../../html/header_clientes.php'; ?>
 
 <body>
     <h1>Bem-vindo, <?php echo $cliente['nome']; ?>!</h1>
