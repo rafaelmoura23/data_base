@@ -21,7 +21,7 @@ $stmt->execute();
 </head>
 
 <body>
-<?php include '../../html/header_clientes.php'; ?>
+<?php include '../../html/header_deslogado.php'; ?>
 
     <?php
     if ($stmt->rowCount() > 0) {
@@ -37,6 +37,9 @@ $stmt->execute();
                     <p id="disponiblidade">Disponibilidade: <?php echo $row['disponibilidade']; ?></p>
                     <p id="preco_aluguel">Preço: <?php echo $row['preco_aluguel']; ?></p>
                     <p id="id_agencia">Agências: <?php echo $row['nome_agencia']; ?></p>
+
+                    
+                    <a href="../login_cliente/login_clientes.php" id="btnAlugar">Alugar</a>
                 </div>
             </div>
     <?php

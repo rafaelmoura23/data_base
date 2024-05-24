@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <?php include '../../html/header_clientes.php'; ?>
+    <?php include '../../html/header_deslogado.php'; ?>
 
     <?php
     require_once '../conexao/conectaBD.php';

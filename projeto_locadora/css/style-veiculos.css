@@ -46,3 +46,19 @@ body {
 #contato {
     margin: 5px 0;
 }
+
+#btnAlugar {
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 7px;
+    background: rgb(11, 30, 60);
+    background: linear-gradient(90deg, rgba(11, 30, 60, 1) 4%, rgba(5, 87, 125, 1) 100%);
+    color: white;
+    box-shadow: 0px 1px 4px #05577D ;
+    border: none;
+}
+
+#btnAlugar:hover{
+    background: rgb(18, 47, 94);
+    background: linear-gradient(90deg, rgb(20, 53, 107) 4%, rgb(13, 125, 177) 100%);
+}

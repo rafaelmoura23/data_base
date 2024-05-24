@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-if (!isset($_SESSION["cliente"])) {
+if (!isset($_SESSION["funcionarios"])) {
     // Redirecionar para a página de login
-    header("Location: ../pagina_login/login_cliente.php");
+    header("Location: ../pagina_login/login_funcionarios.php");
     exit(); // Certifique-se de sair do script após redirecionar
 }
 
-$cliente = $_SESSION["cliente"];
+$funcionarios = $_SESSION["funcionarios"];
 ?>
 
 <!DOCTYPE html>
@@ -20,11 +20,11 @@ $cliente = $_SESSION["cliente"];
     <title>Página Interna</title>
 </head>
 
-<?php include '../../html/header_cliente.php'; ?>
+<?php include '../../html/header_funcionarios.php'; ?>
 
 <body>
-    <h1>Bem-vindo, <?php echo $cliente['nome']; ?>!</h1>
-    <p>Esta é a página interna apenas para clientes logados.</p>
+    <h1>Bem-vindo, <?php echo $funcionarios['nome']; ?>!</h1>
+    <p>Esta é a página interna apenas para funcionarioss logados.</p>
     <a href="../locacoes/locacao_forms.php">Locação</a>
 
 

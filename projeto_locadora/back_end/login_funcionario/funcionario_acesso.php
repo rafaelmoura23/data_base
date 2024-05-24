@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Clientes</title>
+    <title>Cadastro de Funcionarios</title>
     <link rel="stylesheet" href="/style/style-cadastro-clien.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
-<?php include '../../html/header.html'; ?>
+<?php include '../../html/header_funcionario.php'; ?>
 
 <body>
     <div class="container">
-        <form action="insert_banco_login.php" method="post">
+        <form action="insert_banco_login_func.php" method="post">
             <div class="col-4">
-                <h2>Cadastro de Clientes</h2>
+                <h2>Cadastro de Funcionários</h2>
                 <label for="cpf">CPF</label>
                 <input type="text" name="cpf" id="cpf" class="form-control">
             </div>
