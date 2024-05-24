@@ -1,18 +1,3 @@
-<?php
-session_start();
-
-if (!isset($_SESSION["funcionarios"])) {
-    // Redirecionar para a página de login
-    header("Location: ../pagina_login/login_funcionarios.php");
-    exit(); // Certifique-se de sair do script após redirecionar
-}
-
-$funcionarios = $_SESSION["funcionarios"];
-?>
-
-<!DOCTYPE html>
-<html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,9 +8,10 @@ $funcionarios = $_SESSION["funcionarios"];
 <?php include '../../html/header_funcionarios.php'; ?>
 
 <body>
-    <h1>Bem-vindo, <?php echo $funcionarios['nome']; ?>!</h1>
+    <h1>Bem-vindo(a), <?php echo $funcionarios['nome']; ?>!</h1>
     <p>Esta é a página interna apenas para funcionarioss logados.</p>
-    <a href="../locacoes/locacao_forms.php">Locação</a>
+    <a href="../listar_locacoes/listar_locacao.php">Locação</a>
+
 
 
     <a href="./logout.php">Sair</a>

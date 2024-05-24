@@ -1,0 +1,35 @@
+.styled-table {
+    width: 70%; /* Ajuste o tamanho da tabela conforme necessário */
+    margin: 0 auto; /* Centraliza a tabela horizontalmente */
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-family: sans-serif;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 8px 15px; /* Ajusta o espaçamento interno das células */
+}
+
+.styled-table th {
+    background-color: #999999;
+    color: #ffffff;
+    text-align: center; /* Centraliza o texto do cabeçalho */
+    font-weight: bold;
+}
+
+.styled-table td {
+    text-align: center; /* Centraliza o texto das células de dados */
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody td:first-child {
+    font-weight: bold;
+}

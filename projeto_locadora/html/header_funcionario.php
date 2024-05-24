@@ -13,9 +13,8 @@ $localhost_port = $_SERVER['SERVER_PORT'];
         <li><a href="/home"><i class="fas fa-solid fa-home" style="color: #ffffff;"></i> Home</a></li>
         <li><a href="http://localhost:<?php echo $localhost_port; ?>/back_end/lista_veiculos/listar_veiculos.php"><i class="fas fa-solid fa-car" style="color: #ffffff;"></i> Veículos</a></li>
         <li><a href="http://localhost:<?php echo $localhost_port; ?>/back_end/lista_agencias/listar_agencias.php"><i class="fas fa-solid fa-map"></i> Agências</a></li>
-        <li><a href="http://localhost:<?php echo $localhost_port; ?>/back_end/lista_agencias/listar_agencias.php"><i class="fas fa-solid fa-map"></i> Clientes</a></li>
-        <li><a href="http://localhost:<?php echo $localhost_port; ?>/back_end/lista_agencias/listar_agencias.php"><i class="fas fa-solid fa-map"></i> Agências</a></li>
-        <!-- <li><a href="http://"><i class="fas fa-solid fa-info"></i> Sobre Nós</a></li> -->
-        <!-- <li class="login"><a href="http://localhost:<?php echo $localhost_port; ?>/back_end/login_cliente/login_clientes.php"><i class="fas fa-solid fa-user" style="color: #0b1e3c;"></i> Login</a></li> -->
+        <li><a href="http://localhost:<?php echo $localhost_port; ?>"><i class="fas fa-solid fa-map"></i> Clientes</a></li>
+        <li><a href="http://localhost:<?php echo $localhost_port; ?>"><i class="fas fa-solid fa-map"></i> Agências</a></li>
+        <li><a href="http://localhost:<?php echo $localhost_port; ?>/back_end/lista_locacoes/listar_locacao.php"><i class="fas fa-solid fa-map"></i> Locações</a></li>
     </div>
 </nav>

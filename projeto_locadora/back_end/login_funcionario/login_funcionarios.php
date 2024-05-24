@@ -1,7 +1,6 @@
 <?php
-session_start();
-require_once '../conexao/conectaBD.php';
 
+require_once '../conexao/conectaBD.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cpf = $_POST["cpf"];
@@ -12,7 +11,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bindValue(':cpf', $cpf);
     $stmt->execute();
     $funcionario = $stmt->fetch(PDO::FETCH_ASSOC);
-
     if ($funcionario && password_verify($senha, $funcionario['senha'])) {
         $_SESSION["funcionario"] = $funcionario;
         header("Location: ../pagina_interna/interna_funcionario.php");
