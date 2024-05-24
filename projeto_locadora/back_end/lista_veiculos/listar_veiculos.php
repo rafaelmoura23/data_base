@@ -35,7 +35,7 @@ $stmt->execute();
                     <p id="tipo">Marca: <?php echo $row['tipo']; ?></p>
                     <p id="ano">Ano: <?php echo $row['ano']; ?></p>
                     <p id="disponiblidade">Disponibilidade: <?php echo $row['disponibilidade']; ?></p>
-                    
+                    <p id="preco_aluguel">Preço: <?php echo $row['preco_aluguel']; ?></p>
                     <p id="id_agencia">Agências: <?php echo $row['nome_agencia']; ?></p>
                 </div>
             </div>
