@@ -1,4 +1,7 @@
 SQLSTATE[23502]: Not null violation: 7 ERRO:  o valor nulo na coluna "id_cliente" da relação "locacao" viola a restrição de não-nulo
 DETAIL:  Registro que falhou contém (2024-05-17, 2024-05-18, 21, R$ 500,00, 5, null).SQLSTATE[23502]: Not null violation: 7 ERRO:  o valor nulo na coluna "id_cliente" da relação "locacao" viola a restrição de não-nulo
 DETAIL:  Registro que falhou contém (2024-05-17, 2024-05-18, 21, R$ 500,00, 5, null).SQLSTATE[23502]: Not null violation: 7 ERRO:  o valor nulo na coluna "id_cliente" da relação "locacao" viola a restrição de não-nulo
-DETAIL:  Registro que falhou contém (2024-05-17, 2024-05-18, 21, R$ 500,00, 5, null).
+DETAIL:  Registro que falhou contém (2024-05-17, 2024-05-18, 21, R$ 500,00, 5, null).SQLSTATE[23505]: Unique violation: 7 ERRO:  duplicar valor da chave viola a restrição de unicidade "locacao_pkey"
+DETAIL:  Chave (id_locacao)=(20) já existe.SQLSTATE[23505]: Unique violation: 7 ERRO:  duplicar valor da chave viola a restrição de unicidade "locacao_pkey"
+DETAIL:  Chave (id_locacao)=(25) já existe.SQLSTATE[23505]: Unique violation: 7 ERRO:  duplicar valor da chave viola a restrição de unicidade "locacao_pkey"
+DETAIL:  Chave (id_locacao)=(25) já existe.
