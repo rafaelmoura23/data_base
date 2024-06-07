@@ -46,6 +46,10 @@ session_start();
                         <input type="hidden" name="id_cliente" value="<?php echo $row['id_cliente']; ?>">
                         <button type="submit">Deletar</button>
                     </form>
+                    <form method="GET" action="atualizar_cliente.php">
+                        <input type="hidden" name="id_cliente" value="<?php echo $row['id_cliente']; ?>">
+                        <button type="submit">Atualizar</button>
+                    </form>
                 </div>
             </div>
     <?php
