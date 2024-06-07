@@ -25,7 +25,9 @@ $cliente = $_SESSION["cliente"];
 <body>
     <h1>Bem-vindo, <?php echo $cliente['nome']; ?>!</h1>
     <p>Esta é a página interna apenas para clientes logados.</p>
-    <a href="../locacoes/locacao_forms.php">Realizar Locação</a>
+    <a href="../locacoes/locacao_forms.php">Realizar Locação</a> <br>
+
+
 
 
     <a href="./logout.php">Sair</a>
