@@ -17,6 +17,7 @@ $cliente = $_SESSION["cliente"];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style_interna_cliente.css">
     <title>Página Interna</title>
 </head>
 
@@ -25,12 +26,12 @@ $cliente = $_SESSION["cliente"];
 <body>
     <h1>Bem-vindo, <?php echo $cliente['nome']; ?>!</h1>
     <p>Esta é a página interna apenas para clientes logados.</p>
-    <a href="../locacoes/locacao_forms.php">Realizar Locação</a> <br>
+    <a class="botoes" href="../locacoes/locacao_forms.php">Realizar Locação</a> <br>
 
 
 
 
-    <a href="./logout.php">Sair</a>
+    <a class="botoes" id="logout" href="./logout.php">Sair</a>
 </body>
 
 </html>

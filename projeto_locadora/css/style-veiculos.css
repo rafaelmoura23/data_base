@@ -81,3 +81,7 @@ body {
     color: #05577D;
     font-size: 18px;
 }
+
+.filtrosAba {
+    cursor: pointer;
+}
