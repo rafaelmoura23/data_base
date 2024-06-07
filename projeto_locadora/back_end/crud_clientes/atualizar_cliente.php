@@ -2,12 +2,12 @@
 session_start();
 require_once '../conexao/conectaBD.php';
 
-$id_cliente = $_GET['id_cliente'];
+$cpf = $_GET['cpf'];
 
-if (!empty($id_cliente)) {
-    $sql = "SELECT * FROM clientes WHERE id_cliente = :id_cliente";
+if (!empty($cpf)) {
+    $sql = "SELECT * FROM login WHERE cpf = :cpf";
     $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(':id_cliente', $id_cliente, PDO::PARAM_INT);
+    $stmt->bindParam(':cpf', $cpf, PDO::PARAM_INT);
     $stmt->execute();
     $cliente = $stmt->fetch(PDO::FETCH_ASSOC);
 } else {
@@ -32,15 +32,13 @@ if (!empty($id_cliente)) {
 
     <h2>Atualizar Cliente</h2>
     <form method="POST" action="processa_atualizacao.php">
-        <input type="hidden" name="id_cliente" value="<?php echo $cliente['id_cliente']; ?>">
+        <input type="hidden" name="cpf" value="<?php echo $cliente['cpf']; ?>">
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" value="<?php echo $cliente['nome']; ?>">
-        <label for="sobrenome">Sobrenome:</label>
-        <input type="text" id="sobrenome" name="sobrenome" value="<?php echo $cliente['sobrenome']; ?>">
-        <label for="cidade">Cidade:</label>
-        <input type="text" id="cidade" name="cidade" value="<?php echo $cliente['cidade']; ?>">
-        <label for="celular">Celular:</label>
-        <input type="text" id="celular" name="celular" value="<?php echo $cliente['celular']; ?>">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" value="<?php echo $cliente['email']; ?>">
+        <label for="senha">Senha:</label>
+        <input type="text" id="senha" name="senha" value="<?php echo $cliente['senha']; ?>">
         <button type="submit">Atualizar</button>
     </form>
 

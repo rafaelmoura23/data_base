@@ -3,21 +3,20 @@ session_start();
 require_once '../conexao/conectaBD.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $id_cliente = $_POST['id_cliente'];
+    $cpf = $_POST['cpf'];
     $nome = $_POST['nome'];
-    $sobrenome = $_POST['sobrenome'];
-    $cidade = $_POST['cidade'];
-    $celular = $_POST['celular'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
 
-    if (!empty($id_cliente) && !empty($nome) && !empty($sobrenome) && !empty($cidade) && !empty($celular)) {
+    if (!empty($cpf) && !empty($nome) && !empty($email)) {
         try {
-            $sql = "UPDATE clientes SET nome = :nome, sobrenome = :sobrenome, cidade = :cidade, celular = :celular WHERE id_cliente = :id_cliente";
+            $sql = "UPDATE login SET nome = :nome, email = :email , senha = :senha WHERE cpf = :cpf";
             $stmt = $pdo->prepare($sql);
-            $stmt->bindParam(':id_cliente', $id_cliente, PDO::PARAM_INT);
+            $stmt->bindParam(':cpf', $cpf, PDO::PARAM_INT);
             $stmt->bindParam(':nome', $nome, PDO::PARAM_STR);
-            $stmt->bindParam(':sobrenome', $sobrenome, PDO::PARAM_STR);
-            $stmt->bindParam(':cidade', $cidade, PDO::PARAM_STR);
-            $stmt->bindParam(':celular', $celular, PDO::PARAM_STR);
+            $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+            $stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
+            
 
             if ($stmt->execute()) {
                 $_SESSION['message'] = "Cliente atualizado com sucesso!";

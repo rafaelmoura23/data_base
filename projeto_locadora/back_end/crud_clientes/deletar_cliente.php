@@ -3,13 +3,13 @@ session_start();
 require_once '../conexao/conectaBD.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $id_cliente = $_POST['id_cliente'];
+    $cpf = $_POST['cpf'];
 
-    if (!empty($id_cliente)) {
+    if (!empty($cpf)) {
         try {
-            $sql = "DELETE FROM clientes WHERE id_cliente = :id_cliente";
+            $sql = "DELETE FROM login WHERE cpf = :cpf";
             $stmt = $pdo->prepare($sql);
-            $stmt->bindParam(':id_cliente', $id_cliente, PDO::PARAM_INT);
+            $stmt->bindParam(':cpf', $cpf, PDO::PARAM_INT);
 
             if ($stmt->execute()) {
                 $_SESSION['message'] = "Cliente deletado com sucesso!";

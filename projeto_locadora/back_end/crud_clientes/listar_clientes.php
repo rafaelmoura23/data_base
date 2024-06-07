@@ -28,7 +28,7 @@ session_start();
     <?php
     require_once '../conexao/conectaBD.php';
 
-    $sql = "SELECT * FROM clientes";
+    $sql = "SELECT * FROM login";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
     if ($stmt->rowCount() > 0) {
@@ -39,15 +39,14 @@ session_start();
                     <h2 id="nome"><?php echo $row['nome']; ?></h2>
                 </div>
                 <div class="card-body">
-                    <p id="sobrenome">Sobrenome: <?php echo $row['sobrenome']; ?></p>
-                    <p id="cidade">Cidade: <?php echo $row['cidade']; ?></p>
-                    <p id="celular">Celular: <?php echo $row['celular']; ?></p>
+                    <p id="cpf">cpf: <?php echo $row['cpf']; ?></p>
+                    <p id="email">email: <?php echo $row['email']; ?></p>
                     <form method="POST" action="deletar_cliente.php">
-                        <input type="hidden" name="id_cliente" value="<?php echo $row['id_cliente']; ?>">
+                        <input type="hidden" name="cpf" value="<?php echo $row['cpf']; ?>">
                         <button type="submit">Deletar</button>
                     </form>
                     <form method="GET" action="atualizar_cliente.php">
-                        <input type="hidden" name="id_cliente" value="<?php echo $row['id_cliente']; ?>">
+                        <input type="hidden" name="cpf" value="<?php echo $row['cpf']; ?>">
                         <button type="submit">Atualizar</button>
                     </form>
                 </div>

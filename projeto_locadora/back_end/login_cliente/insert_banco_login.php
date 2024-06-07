@@ -16,7 +16,7 @@ if (!empty($_POST)) {
     );
 
     if ($stmt->execute($dados)) {
-      header("Location: index.php?msgSucesso=Cadastro realizado com sucesso!");
+      header("Location: login_clientes.php?msgSucesso=Cadastro realizado com sucesso!");
     }
   } catch (PDOException $e) {
     switch ($e->getCode()) {
