@@ -29,7 +29,7 @@ if (!empty($_POST)) {
         break;
       default:
         error_log($e->getMessage(), 3, "log_erros.txt");
-        header("Location: index.php?msgErro=Falha ao cadastrar...");
+        header("Location: cadastro_forms.php?msgErro=Falha ao cadastrar...");
     }
   }
 } else {

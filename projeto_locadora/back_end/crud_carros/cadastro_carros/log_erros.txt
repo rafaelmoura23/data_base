@@ -1,0 +1,2 @@
+SQLSTATE[22P02]: Invalid text representation: 7 ERRO:  sintaxe de entrada é inválida para tipo integer: ""
+CONTEXT:  parâmetro de portal sem nome $1 = ''
