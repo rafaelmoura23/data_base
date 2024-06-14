@@ -5,7 +5,7 @@ require_once '../conexao/conectaBD.php';
 $sql = "SELECT c.modelo, c.tipo, c.ano, c.disponibilidade, c.preco_aluguel, a.cidade AS nome_agencia
         FROM carro c
         INNER JOIN agencia a ON c.id_agencia = a.numero_agencia
-        WHERE 1=1";
+        WHERE c.disponibilidade = 'Disponível'";
 
 
 // pegando os inputs de modelos e ano

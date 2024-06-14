@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<link rel="stylesheet" href="../../css/style_confirmacao.css">
 <html>
 
 <head>
@@ -26,13 +27,44 @@
         </tr>
     </table>
 
-    <h3>Deseja confirmar o Aluguel do carro?</h3>
-    <button id="confirmarBtn" onclick="confirmarLocacao()">Confirmar</button>
-    <button id="cancelarBtn" onclick="cancelar()">Cancelar</button>
+    <h2>Painel de Pagamento</h2>
+
+<form id="formPagamento">
+    <div class="grupo-campos">
+        <label for="metodoPagamento">Método de Pagamento:</label>
+        <select id="metodoPagamento" name="metodoPagamento">
+            <option value="cartao">Cartão de Crédito</option>
+            <option value="boleto">Boleto Bancário</option>
+            </select>
+    </div>
+
+    <div class="grupo-campos">
+        <label for="numeroCartao">Número do Cartão:</label>
+        <input type="text" id="numeroCartao" name="numeroCartao" placeholder="0000 0000 0000 0000" maxlength="16">
+    </div>
+
+    <div class="grupo-campos">
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3">
+    </div>
+
+    <div class="grupo-campos">
+        <label for="nomeTitular">Nome do Titular:</label>
+        <input type="text" id="nomeTitular" name="nomeTitular" placeholder="João da Silva">
+    </div>
+
+    <div class="grupo-campos">
+        <label for="cpfTitular">CPF do Titular:</label>
+        <input type="text" id="cpfTitular" name="cpfTitular" placeholder="000.000.000-00">
+    </div>
+
+    <button type="button" id="confirmarBtn" onclick="confirmarLocacao()">Confirmar Pagamento</button>
+    <button type="button" id="cancelarBtn" onclick="cancelar()">Cancelar</button>
+</form>
+</div>
 </body>
 <script type="text/javascript">
         function confirmarLocacao() {
-            // Capturar os valores dos campos
             var dataLocacao = "<?php echo $_GET['data_locacao']; ?>";
             var dataDevolucao = "<?php echo $_GET['data_devolucao']; ?>";
             var idLocacao = "<?php echo $_GET['id_locacao']; ?>";
@@ -40,7 +72,7 @@
             var valorTotal = "<?php echo $_GET['valor_total']; ?>";
             var idCliente = "<?php echo $_GET['id_cliente']; ?>";
 
-            // Calcular o número de dias entre as datas
+            // Calcular o número de dias que o veículo ficará alugado
             var date1 = new Date(dataLocacao);
             var date2 = new Date(dataDevolucao);
             var timeDiff = Math.abs(date2.getTime() - date1.getTime());

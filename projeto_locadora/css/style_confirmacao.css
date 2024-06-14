@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5; /* Cor de fundo da página */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff; /* Cor de fundo do container */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra do container */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* Cor do título principal */
+}
+
+.tabela-dados {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.tabela-dados th,
+.tabela-dados td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.tabela-dados th {
+    background-color: #f0f0f0;
+    text-align: left;
+    color: #666; /* Cor dos títulos da tabela */
+}
+
+.tabela-dados tr:nth-child(odd) {
+    background-color: #fff; /* Cor alternada das linhas da tabela */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* Cor do título do painel de pagamento */
+}
+
+.grupo-campos {
+    margin-bottom: 15px;
+    display: flex; /* Flexbox para organizar os campos lado a lado */
+}
+
+label {
+    flex-basis: 25%; /* Ocupa 25% do espaço disponível */
+    padding-right: 10px; /* Espaçamento à direita do rótulo */
+}
+
+input,
+select {
+    flex-basis: 75%; /* Ocupa 75% do espaço disponível */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%; /* Ocupa toda a largura disponível */
+}
+
+#formPagamento {
+    margin-top: 20px; /* Espaçamento superior do formulário */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Cor do botão de confirmação */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Efeito de hover */
+}
+
+button:hover {
+    background-color: #45a049; /* Cor do botão de confirmação no hover */
+}
+
+#cancelarBtn {
+    background-color: #f44336; /* Cor do botão de cancelamento */
+    margin-left: 10px; /* Espaçamento entre os botões */
+}
