@@ -20,12 +20,12 @@ if (!empty($_POST)) {
     );
 
     if ($stmt->execute($dados)) {
-      header("Location: index.php?msgSucesso=Cadastro realizado com sucesso!");
+      header("Location: ../../../index.php?msgSucesso=Cadastro realizado com sucesso!");
     }
   } catch (PDOException $e) {
     switch ($e->getCode()) {
       case 23502:
-        header("Location: index.php?msgErro=Cliente já cadastro!");
+        header("Location: cadastro_forms.php?msgErro=Carro já cadastrado!");
         break;
       default:
         error_log($e->getMessage(), 3, "log_erros.txt");
@@ -33,6 +33,6 @@ if (!empty($_POST)) {
     }
   }
 } else {
-  header("Location: index.php?msgErro=Erro de acesso.");
+  header("Location: ../../../index.php?msgErro=Erro de acesso.");
 }
 die();

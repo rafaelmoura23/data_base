@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<?php include 'html/header_clientes.php'; ?>
+<?php include '../../../html/header_funcionario.php'; ?>
     <div class="container">
         <form action="cadastro_banco.php" method="post">
             <div class="col-4">
@@ -48,7 +48,7 @@
             </div>
 
             <button type="submit" name="enviarDados" class="btn btn-primary">Cadastrar Carro</button>
-            <a href="../../index.php" class="btn btn-danger">Cancelar</a>
+            <a href="../../../index.php" class="btn btn-danger">Cancelar</a>
 
         </form>
     </div>
